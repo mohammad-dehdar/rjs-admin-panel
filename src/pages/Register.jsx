@@ -19,8 +19,7 @@ function Register() {
     registerUser(
       { username: data.username, password: data.password },
       {
-        onSuccess: (response) => {
-          setCookie('token', response.token);
+        onSuccess: () => {
           setCookie('username', data.username);
           navigate('/login');
         },

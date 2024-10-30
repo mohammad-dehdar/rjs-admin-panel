@@ -13,10 +13,9 @@ function AppRoutes() {
         <BrowserRouter>
             <ProductProvider>
                 <Routes>
-                    {/* صفحه اصلی با محتوا و منطق ریدایرکت */}
+                  
                     <Route path="/" element={<HomePage />} />
                     
-                    {/* صفحات عمومی */}
                     <Route 
                         path="/register" 
                         element={

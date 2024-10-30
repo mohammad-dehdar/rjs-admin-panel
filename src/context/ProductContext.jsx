@@ -4,7 +4,7 @@ import api from '../config/api';
 
 const ProductContext = createContext();
 
-// Fetch initial data to get total pages
+
 const useInitialProducts = () => {
     return useQuery({
         queryKey: ['initialProducts'],
@@ -15,7 +15,7 @@ const useInitialProducts = () => {
     });
 };
 
-// Fetch all products for search functionality
+
 const useAllProducts = (totalPages) => {
     return useQuery({
         queryKey: ['allProducts', totalPages],
@@ -84,7 +84,7 @@ const ProductProvider = ({ children }) => {
         };
     }, [allProducts, searchTerm, currentPage, itemsPerPage]);
 
-    // Reset to first page when search term changes
+
     useEffect(() => {
         setCurrentPage(1);
     }, [searchTerm]);
